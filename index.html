@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soils of India | Explore Our Earth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">🌱 Soil<span>India</span></a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#types">Soil Types</a></li>
+        <li><a href="#importance">Importance</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+      </ul>
+      <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="eyebrow">DISCOVER INDIA'S NATURAL WEALTH</p>
+      <h1>Explore the <span>Soils of India</span></h1>
+      <p>
+        From the fertile plains of the North to the red earth
+        of the South, discover the soils that nourish India.
+      </p>
+      <a href="#types" class="btn">Explore Soil Types ↓</a>
+    </div>
+    <div class="hero-art" aria-label="Illustration of soil layers" role="img">
+      <div class="sun"></div>
+      <div class="hill hill-one"></div>
+      <div class="hill hill-two"></div>
+      <div class="ground">
+        <div class="soil-layer layer-one"></div>
+        <div class="soil-layer layer-two"></div>
+        <div class="soil-layer layer-three"></div>
+      </div>
+      <span class="plant">🌾</span>
+      <span class="plant plant-two">🌱</span>
+    </div>
+  </section>
+
+  <section class="intro">
+    <h2>Why Does Soil Matter?</h2>
+    <p>
+      Soil supports plant growth, stores water, recycles nutrients
+      and sustains ecosystems. India's varied climate, relief and
+      geology create many different soil types.
+    </p>
+    <div class="stats">
+      <div><strong>6</strong><span>Major soil groups below</span></div>
+      <div><strong>28+</strong><span>States and diverse landscapes</span></div>
+      <div><strong>1</strong><span>Earth to protect</span></div>
+    </div>
+  </section>
+
+  <section class="types-section" id="types">
+    <div class="section-heading">
+      <p class="eyebrow">KNOW YOUR SOIL</p>
+      <h2>Major Types of Soil in India</h2>
+      <p>Explore their properties, distribution and important crops.</p>
+    </div>
+
+    <div class="filters">
+      <input type="search" id="searchInput"
+        placeholder="Search soil, region or crop..."
+        aria-label="Search soil types">
+      <select id="regionFilter" aria-label="Filter by region">
+        <option value="all">All regions</option>
+        <option value="north">Northern India</option>
+        <option value="south">Southern India</option>
+        <option value="central">Central and Western India</option>
+        <option value="east">Eastern and Coastal India</option>
+        <option value="mountain">Mountain regions</option>
+      </select>
+    </div>
+
+    <div class="soil-grid" id="soilGrid"></div>
+    <p id="noResults" hidden>No matching soils found. Try another search.</p>
+  </section>
+
+  <section class="importance" id="importance">
+    <div>
+      <p class="eyebrow">OUR RESPONSIBILITY</p>
+      <h2>Protect the Soil, Protect Our Future</h2>
+      <p>
+        Healthy soil is essential for food security, biodiversity
+        and clean water. Small actions can help preserve it.
+      </p>
+    </div>
+    <div class="tips">
+      <div>🌳 <span><strong>Plant trees</strong><br>Help prevent soil erosion.</span></div>
+      <div>♻️ <span><strong>Use compost</strong><br>Return organic matter to soil.</span></div>
+      <div>💧 <span><strong>Save water</strong><br>Use water efficiently in farming.</span></div>
+      <div>🌾 <span><strong>Rotate crops</strong><br>Help maintain soil fertility.</span></div>
+    </div>
+  </section>
+
+  <section class="quiz-section" id="quiz">
+    <p class="eyebrow">TEST YOUR KNOWLEDGE</p>
+    <h2>Soil Explorer Quiz</h2>
+    <p id="question">Which soil is especially associated with cotton cultivation?</p>
+    <div class="quiz-options" id="quizOptions">
+      <button data-answer="Red soil">Red soil</button>
+      <button data-answer="Black soil">Black soil</button>
+      <button data-answer="Mountain soil">Mountain soil</button>
+      <button data-answer="Desert soil">Desert soil</button>
+    </div>
+    <p id="quizFeedback" aria-live="polite"></p>
+    <button class="btn" id="nextQuestion">Next Question →</button>
+    <p id="score"></p>
+  </section>
+
+  <footer>
+    <a href="#home" class="logo">🌱 Soil<span>India</span></a>
+    <p>Understand the ground beneath us. Protect the world around us.</p>
+    <p>Educational project | Soils of India</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
