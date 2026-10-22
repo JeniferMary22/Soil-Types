@@ -4,125 +4,345 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Explore the major soil types of India, their properties, distribution, crops, and importance in protecting our environment.">
+
+  <meta name="theme-color" content="#f4f7ed">
   <title>Soils of India | Explore Our Earth</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Loading Animation -->
+  <div class="page-loader" id="pageLoader" aria-label="Loading website">
+    <div class="loader-content">
+      <span class="loader-icon">🌱</span>
+      <p>Growing Knowledge...</p>
+      <div class="loader-bar">
+        <div class="loader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
   <header>
-    <nav class="navbar">
-      <a href="#" class="logo">🌱 Soil<span>India</span></a>
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="#home" class="logo">🌱 Soil<span>India</span></a>
+
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#types">Soil Types</a></li>
         <li><a href="#importance">Importance</a></li>
         <li><a href="#quiz">Quiz</a></li>
       </ul>
-      <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+
+      <button
+        id="themeToggle"
+        type="button"
+        aria-label="Toggle dark mode"
+        aria-pressed="false">
+        🌙
+      </button>
     </nav>
   </header>
 
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <p class="eyebrow">DISCOVER INDIA'S NATURAL WEALTH</p>
-      <h1>Explore the <span>Soils of India</span></h1>
-      <p>
-        From the fertile plains of the North to the red earth
-        of the South, discover the soils that nourish India.
-      </p>
-      <a href="#types" class="btn">Explore Soil Types ↓</a>
-    </div>
-    <div class="hero-art" aria-label="Illustration of soil layers" role="img">
-      <div class="sun"></div>
-      <div class="hill hill-one"></div>
-      <div class="hill hill-two"></div>
-      <div class="ground">
-        <div class="soil-layer layer-one"></div>
-        <div class="soil-layer layer-two"></div>
-        <div class="soil-layer layer-three"></div>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">DISCOVER INDIA'S NATURAL WEALTH</p>
+
+        <h1>Explore the <span>Soils of India</span></h1>
+
+        <p>
+          From the fertile plains of the North to the red earth
+          of the South, discover the soils that nourish India.
+        </p>
+
+        <a href="#types" class="btn">
+          Explore Soil Types <span aria-hidden="true">↓</span>
+        </a>
       </div>
-      <span class="plant">🌾</span>
-      <span class="plant plant-two">🌱</span>
-    </div>
-  </section>
 
-  <section class="intro">
-    <h2>Why Does Soil Matter?</h2>
-    <p>
-      Soil supports plant growth, stores water, recycles nutrients
-      and sustains ecosystems. India's varied climate, relief and
-      geology create many different soil types.
-    </p>
-    <div class="stats">
-      <div><strong>6</strong><span>Major soil groups below</span></div>
-      <div><strong>28+</strong><span>States and diverse landscapes</span></div>
-      <div><strong>1</strong><span>Earth to protect</span></div>
-    </div>
-  </section>
+      <!-- Animated Landscape -->
+      <div
+        class="hero-art"
+        aria-label="Illustration of the sun, hills, plants, and underground soil layers"
+        role="img">
 
-  <section class="types-section" id="types">
-    <div class="section-heading">
-      <p class="eyebrow">KNOW YOUR SOIL</p>
-      <h2>Major Types of Soil in India</h2>
-      <p>Explore their properties, distribution and important crops.</p>
-    </div>
+        <div class="sun"></div>
+        <div class="floating-cloud cloud-one"></div>
+        <div class="floating-cloud cloud-two"></div>
 
-    <div class="filters">
-      <input type="search" id="searchInput"
-        placeholder="Search soil, region or crop..."
-        aria-label="Search soil types">
-      <select id="regionFilter" aria-label="Filter by region">
-        <option value="all">All regions</option>
-        <option value="north">Northern India</option>
-        <option value="south">Southern India</option>
-        <option value="central">Central and Western India</option>
-        <option value="east">Eastern and Coastal India</option>
-        <option value="mountain">Mountain regions</option>
-      </select>
-    </div>
+        <div class="hill hill-one"></div>
+        <div class="hill hill-two"></div>
 
-    <div class="soil-grid" id="soilGrid"></div>
-    <p id="noResults" hidden>No matching soils found. Try another search.</p>
-  </section>
+        <div class="ground">
+          <div class="soil-layer layer-one"></div>
+          <div class="soil-layer layer-two"></div>
+          <div class="soil-layer layer-three"></div>
+        </div>
 
-  <section class="importance" id="importance">
-    <div>
-      <p class="eyebrow">OUR RESPONSIBILITY</p>
-      <h2>Protect the Soil, Protect Our Future</h2>
+        <span class="plant plant-one" aria-hidden="true">🌾</span>
+        <span class="plant plant-two" aria-hidden="true">🌱</span>
+        <span class="butterfly" aria-hidden="true">🦋</span>
+      </div>
+
+      <a href="#intro" class="scroll-indicator" aria-label="Scroll to introduction">
+        <span aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <!-- Introduction -->
+    <section class="intro reveal" id="intro">
+      <p class="eyebrow">THE FOUNDATION OF LIFE</p>
+      <h2>Why Does Soil Matter?</h2>
+
       <p>
-        Healthy soil is essential for food security, biodiversity
-        and clean water. Small actions can help preserve it.
+        Soil supports plant growth, stores water, recycles nutrients
+        and sustains ecosystems. India's varied climate, relief and
+        geology create many different soil types.
       </p>
-    </div>
-    <div class="tips">
-      <div>🌳 <span><strong>Plant trees</strong><br>Help prevent soil erosion.</span></div>
-      <div>♻️ <span><strong>Use compost</strong><br>Return organic matter to soil.</span></div>
-      <div>💧 <span><strong>Save water</strong><br>Use water efficiently in farming.</span></div>
-      <div>🌾 <span><strong>Rotate crops</strong><br>Help maintain soil fertility.</span></div>
-    </div>
-  </section>
 
-  <section class="quiz-section" id="quiz">
-    <p class="eyebrow">TEST YOUR KNOWLEDGE</p>
-    <h2>Soil Explorer Quiz</h2>
-    <p id="question">Which soil is especially associated with cotton cultivation?</p>
-    <div class="quiz-options" id="quizOptions">
-      <button data-answer="Red soil">Red soil</button>
-      <button data-answer="Black soil">Black soil</button>
-      <button data-answer="Mountain soil">Mountain soil</button>
-      <button data-answer="Desert soil">Desert soil</button>
-    </div>
-    <p id="quizFeedback" aria-live="polite"></p>
-    <button class="btn" id="nextQuestion">Next Question →</button>
-    <p id="score"></p>
-  </section>
+      <div class="stats">
+        <div class="stat-card">
+          <strong>6</strong>
+          <span>Major soil groups below</span>
+        </div>
 
-  <footer>
+        <div class="stat-card">
+          <strong>28+</strong>
+          <span>States and diverse landscapes</span>
+        </div>
+
+        <div class="stat-card">
+          <strong>1</strong>
+          <span>Earth to protect</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Soil Types -->
+    <section class="types-section reveal" id="types">
+      <div class="section-heading">
+        <p class="eyebrow">KNOW YOUR SOIL</p>
+        <h2>Major Types of Soil in India</h2>
+        <p>
+          Explore their properties, distribution and important crops.
+        </p>
+      </div>
+
+      <div class="filters">
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search soil, region or crop..."
+          aria-label="Search soil types"
+          autocomplete="off">
+
+        <select id="regionFilter" aria-label="Filter by region">
+          <option value="all">All regions</option>
+          <option value="north">Northern India</option>
+          <option value="south">Southern India</option>
+          <option value="central">Central and Western India</option>
+          <option value="east">Eastern and Coastal India</option>
+          <option value="mountain">Mountain regions</option>
+        </select>
+      </div>
+
+      <div
+        class="soil-grid"
+        id="soilGrid"
+        aria-live="polite">
+      </div>
+
+      <p id="noResults" hidden>
+        No matching soils found. Try another search.
+      </p>
+    </section>
+
+    <!-- Importance -->
+    <section class="importance reveal" id="importance">
+      <div class="importance-content">
+        <p class="eyebrow">OUR RESPONSIBILITY</p>
+        <h2>Protect the Soil, Protect Our Future</h2>
+
+        <p>
+          Healthy soil is essential for food security, biodiversity
+          and clean water. Small actions can help preserve it.
+        </p>
+
+        <a href="#quiz" class="btn">Test Your Knowledge →</a>
+      </div>
+
+      <div class="tips">
+        <div class="tip-card">
+          <span class="tip-icon" aria-hidden="true">🌳</span>
+          <span>
+            <strong>Plant trees</strong>
+            <span>Help prevent soil erosion.</span>
+          </span>
+        </div>
+
+        <div class="tip-card">
+          <span class="tip-icon" aria-hidden="true">♻️</span>
+          <span>
+            <strong>Use compost</strong>
+            <span>Return organic matter to soil.</span>
+          </span>
+        </div>
+
+        <div class="tip-card">
+          <span class="tip-icon" aria-hidden="true">💧</span>
+          <span>
+            <strong>Save water</strong>
+            <span>Use water efficiently in farming.</span>
+          </span>
+        </div>
+
+        <div class="tip-card">
+          <span class="tip-icon" aria-hidden="true">🌾</span>
+          <span>
+            <strong>Rotate crops</strong>
+            <span>Help maintain soil fertility.</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz -->
+    <section class="quiz-section reveal" id="quiz">
+      <p class="eyebrow">TEST YOUR KNOWLEDGE</p>
+      <h2>Soil Explorer Quiz</h2>
+
+      <div class="quiz-card">
+        <p class="quiz-counter" id="quizCounter">
+          Question 1
+        </p>
+
+        <p id="question">
+          Which soil is especially associated with cotton cultivation?
+        </p>
+
+        <div class="quiz-options" id="quizOptions">
+          <button type="button" data-answer="Red soil">Red soil</button>
+          <button type="button" data-answer="Black soil">Black soil</button>
+          <button type="button" data-answer="Mountain soil">Mountain soil</button>
+          <button type="button" data-answer="Desert soil">Desert soil</button>
+        </div>
+
+        <p id="quizFeedback" aria-live="polite"></p>
+
+        <button class="btn" id="nextQuestion" type="button">
+          Next Question →
+        </button>
+
+        <p id="score" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="reveal">
     <a href="#home" class="logo">🌱 Soil<span>India</span></a>
-    <p>Understand the ground beneath us. Protect the world around us.</p>
+
+    <p>
+      Understand the ground beneath us.
+      Protect the world around us.
+    </p>
+
     <p>Educational project | Soils of India</p>
+
+    <a href="#home" class="back-to-top">
+      Back to top ↑
+    </a>
   </footer>
 
+  <!-- Loader and Scroll Animations -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const loader = document.getElementById("pageLoader");
+
+      // Hide the loader after the page is ready
+      window.addEventListener("load", () => {
+        loader.classList.add("loader-hidden");
+
+        setTimeout(() => {
+          loader.remove();
+        }, 700);
+      });
+
+      // Fallback for cases where the load event has already fired
+      if (document.readyState === "complete") {
+        loader.classList.add("loader-hidden");
+        setTimeout(() => loader.remove(), 700);
+      }
+
+      // Reveal sections when they enter the viewport
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 }
+        );
+
+        revealElements.forEach(element => {
+          revealObserver.observe(element);
+        });
+      } else {
+        revealElements.forEach(element => {
+          element.classList.add("visible");
+        });
+      }
+
+      // Stagger soil-card animations, including filtered results
+      const soilGrid = document.getElementById("soilGrid");
+
+      if (soilGrid) {
+        const animateCards = () => {
+          soilGrid.querySelectorAll(".soil-card").forEach((card, index) => {
+            card.style.animationDelay = `${Math.min(index * 100, 600)}ms`;
+          });
+        };
+
+        new MutationObserver(animateCards).observe(soilGrid, {
+          childList: true
+        });
+
+        animateCards();
+      }
+
+      // Smooth scrolling for internal links
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener("click", event => {
+          const target = document.querySelector(link.getAttribute("href"));
+
+          if (target) {
+            event.preventDefault();
+
+            target.scrollIntoView({
+              behavior: window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+              ).matches ? "auto" : "smooth",
+              block: "start"
+            });
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- Main application logic -->
   <script src="script.js"></script>
+
 </body>
 </html>
